@@ -1,0 +1,14 @@
+//importando o modulo os (operating sytem)
+const os = require('os');
+
+//exibindo informações sobre o sistema operacional
+//exibindo a arquitetura do sistema
+console.log('arquitetura do sistema:', os.arch());
+//exibindo a quantidade de CPUs
+console.log('quantidade de CPUs:', os.cpus().length);
+//exibindo a quantidade de memoria em bytes
+console.log('memoria total (bytes):', os.totalmem());
+//exibindo a quantidade memoria livre em bytes
+console.log('memoria livre (bytes):', os.freemem());
+//exibindo o sitema operacional
+console.log(os.plataforma());

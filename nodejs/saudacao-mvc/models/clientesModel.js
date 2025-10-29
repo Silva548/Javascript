@@ -1,12 +1,14 @@
 module.exports = {
-  gerarMensagemPersonalizada: (nome, senha) => {
+
+  gerarMensagemPersonalizada: (login, senha) => {
     let acesso;
 
-    if :login === 'jao' && senha === "1234" {
-      acesso = "Acesso Permitido";
+    if (login === "jao" && senha === "1234") {
+      acesso = "liberado";
      } else {
-      acesso = "Acesso Negado";
+      acesso = "Negado";
      }
-  }
-  return `Olá, ${nome}! seu acesso foi ${acesso}`;
-};
+    return `Olá, ${login}! seu acesso foi ${acesso},`;
+    }  
+  
+  };

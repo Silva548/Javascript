@@ -1,4 +1,4 @@
-const { clientes, formulario } = require("./siteController");
+const clientesModel = require("../models/clientesModel");
 
 module.exports = {
 
@@ -7,13 +7,13 @@ module.exports = {
     },
 
     formulario: (req, res) => {
-        res.sendFile('login.html', { root: './views' });
+        res.sendFile('formLogin.html', { root: './views' });
       },
     
       login: (req, res) => {
-        const { nome, senha} = req.body;
-        const mensagem = clientesModel.gerarMensagemPersonalizada(nome, senha);
-        res.send(`<h1>${mensagem}</h1>`);
+        const { login, senha} = req.body;
+        const mensagemLogin = clientesModel.gerarMensagemPersonalizada(login, senha);
+        res.send(`<h1>${mensagemLogin}</h1>`);
       }
 
 };
